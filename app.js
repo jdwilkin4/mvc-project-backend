@@ -36,11 +36,6 @@ app.use(backgroundChecks);
 app.use(covidTests);
 app.use(tbTests);
 
-app.use(express.static(path.join(__dirname, 'frontend/build')));
-
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, 'frontend/build', 'frontend/build/index.html'));
-});
 
 app.listen(port, () => {
     console.log(`Backend server started at port: ${port}`)
