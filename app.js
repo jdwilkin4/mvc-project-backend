@@ -36,6 +36,10 @@ app.use(backgroundChecks);
 app.use(covidTests);
 app.use(tbTests);
 
+//create homepage
+app.get("/", (req, res) => {
+    res.send('This is the homepage')
+})
 
 app.listen(port, () => {
     console.log(`Backend server started at port: ${port}`)
