@@ -1,7 +1,7 @@
 require('dotenv').config();
 const nodeMailer = require('nodemailer');
 const email = process.env.EMAIL;
-const password = process.env.PASSWORD
+const password = process.env.PASSWORD;
 
 
 let transporter = nodeMailer.createTransport({
@@ -35,7 +35,7 @@ exports.applications = (req, res) => {
             console.log(`Applications: There was an error sending the message: ${err}`)
             res.json({ status: 'Email failure' })
         } else {
-            console.log(`Applications: Success: Email was sent`)
+            console.log(`Applications Success: Email was sent`)
             res.json({ status: "Email sent" });
         }
     })
